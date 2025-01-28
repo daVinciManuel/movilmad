@@ -1,4 +1,5 @@
 # por hacer:
+---------------------------------------------------------
 x makeToken.php
 x checkToken.php
 x delToken.php

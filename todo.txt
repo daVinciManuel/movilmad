@@ -1,8 +1,14 @@
 # por hacer:
 x makeToken.php
 x checkToken.php
-- delToken.php
-- logout.php > movlogin.php
-
-- implementar checkToken();
-- update links in login, welcome
+x delToken.php
+x implementar checkToken();
+x logout.php > movlogin.php
+x update links in login, welcome
+- copy php code from ./mov* to control/mov*
+- registro.php
+- save encrypted passwords in db
+- show available cars in movalquilar.php
+- make carrito cookie like pedidos app LIMIT 3 ITEMS
+- show carrito 
+- vaciar carrito button

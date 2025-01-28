@@ -1,0 +1,8 @@
+# por hacer:
+x makeToken.php
+x checkToken.php
+- delToken.php
+- logout.php > movlogin.php
+
+- implementar checkToken();
+- update links in login, welcome

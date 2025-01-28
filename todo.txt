@@ -5,7 +5,7 @@ x delToken.php
 x implementar checkToken();
 x logout.php > movlogin.php
 x update links in login, welcome
-- copy php code from ./mov* to control/mov*
+x copy php code from ./mov* to control/mov*
 - registro.php
 - save encrypted passwords in db
 - show available cars in movalquilar.php

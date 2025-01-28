@@ -16,6 +16,10 @@ if(!checkToken()){
   $consultarURL = './movconsultar.php';
   $devolverURL = './movdevolver.php';
 }
+if(isset($_POST['volver'])){
+  header('Location: ./movwelcome.php');
+}
+var_dump($_POST);
 ?>
 <html>
    

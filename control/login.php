@@ -1,5 +1,5 @@
 <?php
-echo "<h2>Hello World</h2>";
+echo "<h2>Hello</h2>";
 echo "<h2>This is the login </h2>";
 require_once '../movconfig.php';
 require_once '../sql/connect.php';

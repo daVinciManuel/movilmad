@@ -19,7 +19,6 @@ if(!checkToken()){
 if(isset($_POST['volver'])){
   header('Location: ./movwelcome.php');
 }
-var_dump($_POST);
 ?>
 <html>
    

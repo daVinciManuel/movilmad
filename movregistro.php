@@ -1,7 +1,5 @@
 <?php
-$visibilidad = 'visible';
-$correo = 'mary.smith@movilmad.net';
-$nombre = 'mary';
+require './control/cregistro.php';
 ?>
 <html>
    
@@ -34,6 +32,7 @@ $nombre = 'mary';
 		<input type="submit" name="submit" value="Crear Usuario" class="btn btn-warning disabled">
         </form>
 		
+      <a href='./movlogin.php'>Iniciar sesi&oacute;n</a>
 	    </div>
     </div>
       <dialog class="card border-info <?php echo $visibilidad?>" >
@@ -42,7 +41,7 @@ $nombre = 'mary';
           Hola&nbsp;<?php echo $nombre ?>
         </div>
           <br>
-          <b>Tu correo es:&nbsp;</b><?php echo $correo ?>
+          <b>Tu correo es:&nbsp;</b><?php echo $email ?>
           <br>
           <b>Tu clave es:&nbsp;</b><?php echo $clave ?>
           <br>

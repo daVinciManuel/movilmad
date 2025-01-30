@@ -8,6 +8,18 @@ function getEmail($name){
     $email = $stmt->fetchColumn();
   return $email;
 }
+function thisEmailExist($email){
+  $emailExists = false;
+  $conn = connect();
+    $query = "SELECT email FROM rclientes WHERE email='".$email."';";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $emailStored = $stmt->fetchColumn();
+  if($emailStored == $email){
+    $emailExists = true;
+  }
+  return $emailExists;
+}
 function getName($email){
   $conn = connect();
     $query = "SELECT nombre FROM rclientes WHERE email='".$email."';";
@@ -22,6 +34,14 @@ function getIdcliente($name){
     $stmt = $conn->prepare($query);
     $stmt->execute();
     $id = $stmt->fetchColumn();
+  return $id;
+}
+function getNewIdcliente(){
+  $conn = connect();
+    $query = "SELECT max(idcliente) FROM rclientes;";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $id = 1 + intval($stmt->fetchColumn());
   return $id;
 }
 function getFullName($name){

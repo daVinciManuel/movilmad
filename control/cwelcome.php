@@ -17,3 +17,5 @@ if(!checkToken()){
   $consultarURL = './movconsultar.php';
   $devolverURL = './movdevolver.php';
 }
+echo $logoutURL;
+echo '<br>'.$name;

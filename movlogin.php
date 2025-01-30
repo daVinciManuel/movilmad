@@ -31,7 +31,7 @@
 		
 	    </div>
     </div>
-    </div>
+      <a href='./movregistro.php'>Registrarse</a>
     </div>
 
 </body>

@@ -26,3 +26,20 @@ function saveUser($idcliente,$nombre,$apellido,$email){
     }
     $conn = null;
 }
+function savePassword($pass){
+    $conn = connect();
+    $clave = password_hash($pass, PASSWORD_DEFAULT);
+  try {
+      $conn->beginTransaction();
+      $query = 'INSERT INTO topsecret (idcliente,clave) VALUES (:idcliente,:clave)';
+      $stmt = $conn->prepare($query);
+      $stmt->bindParam(':idcliente', $pass);
+      $stmt->bindParam(':clave', $clave);
+      $stmt->execute();
+      $conn->commit();
+  } catch (PDOException $e) {
+      $conn->rollback();
+      die($e->getMessage());
+  }
+    $conn = null;
+}

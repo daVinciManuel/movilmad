@@ -19,6 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   }else{
     $visibilidad = 'visible';
     saveUser($clave,$nombre,$apellido,$email);
+    savePassword($clave);
   }
 }
 

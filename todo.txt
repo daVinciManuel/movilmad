@@ -8,7 +8,7 @@ x logout.php > movlogin.php
 x update links in login, welcome
 x copy php code from ./mov* to control/mov*
 x registro.php
-- save encrypted passwords in db
+x save encrypted passwords in db
 - show available cars in movalquilar.php
 - make carrito cookie like pedidos app LIMIT 3 ITEMS
 - show carrito 

@@ -1,5 +1,5 @@
 <?php
-require_once '../movconfig.php';
+// require_once '../movconfig.php';
 require_once '../sql/connect.php';
 require '../model/verifyLogin.php';
 require '../cookies/makeToken.php';

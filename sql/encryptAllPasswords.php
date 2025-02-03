@@ -1,7 +1,7 @@
 <?php
 // THIS PHP SCRIPT ONLY WORKS IF movilmad.topsecret TABLE IS EMPTY
 // EXECUTE passwordsTable.sql BEFORE RUNNING THIS SCRIPT
-require "../movconfig.php";
+// require "../movconfig.php";
 require "./connect.php";
 
 function getIdList(){

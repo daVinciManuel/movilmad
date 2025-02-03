@@ -1,5 +1,5 @@
 <?php
-require './movconfig.php';
+// require './movconfig.php';
 require './sql/connect.php';
 require './model/queries.php';
 require './model/verifyLogin.php';

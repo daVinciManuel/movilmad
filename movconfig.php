@@ -1,4 +1,5 @@
 ﻿<?php
+ob_start();
 if(isset($_ENV['DB_HOST'])){
   define('DB_HOST',$_ENV['DB_DATABASE']);
 }else{
@@ -19,3 +20,4 @@ if(isset($_ENV['DB_DATABASE'])){
 }else{
   define('DB_DATABASE','movilmad');
 }
+ob_end_flush();

@@ -35,7 +35,7 @@ require './control/cconsultar.php';
 		<div>
 			<input type="submit" value="Consultar" name="consultar" class="btn btn-warning disabled">
 		
-			<input type="submit" value="Volver" name="volver" onclick="window.location.href='<?php echo $welcomeURL; ?>'" class="btn btn-warning disabled">
+			<input type="button" value="Volver" name="volver" onclick="window.location.href='<?php echo $welcomeURL; ?>'" class="btn btn-warning disabled">
 		
 		</div>		
 	</form>

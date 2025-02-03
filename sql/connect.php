@@ -1,7 +1,7 @@
 <?php
 function connect(){
 // require './movconfig.php';
-    $dbhost = substr($_ENV['DB_HOST'],0,78);
+    $dbhost = substr($_ENV['DB_HOST'],46,78);
     $username = $_ENV['DB_USERNAME'];
     $password = $_ENV['DB_PASSWORD'];
     $dbname = $_ENV['DB_DATABASE'];

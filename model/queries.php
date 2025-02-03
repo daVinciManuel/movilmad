@@ -4,7 +4,6 @@ function getEmail($name){
   $conn = connect();
     $query = "SELECT email FROM rclientes WHERE nombre='".$name."';";
     $stmt = $conn->prepare($query);
-    $stmt->execute();
     $email = $stmt->fetchColumn();
   return $email;
 }

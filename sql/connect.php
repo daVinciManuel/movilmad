@@ -1,13 +1,13 @@
 <?php
 function connect(){
 // require './movconfig.php';
-    $servername = MYSQL_PRODUCTION;
-    $username = DB_USERNAME;
-    $password = DB_PASSWORD;
-    $dbname = DB_DATABASE;
+    $dbhost = $_ENV['DB_HOST'];
+    $username = $_ENV['DB_USERNAME'];
+    $password = $_ENV['DB_PASSWORD'];
+    $dbname = $_ENV['DB_DATABASE'];
 
     try{
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$username,$password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch(PDOException $e){

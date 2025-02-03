@@ -1,5 +1,21 @@
 ﻿<?php
-define('DB_SERVER','localhost');
-define('DB_USERNAME','root');
-define('DB_PASSWORD','rootroot');
-define('DB_DATABASE','movilmad');
+if(isset($_ENV['DB_HOST'])){
+  define('DB_HOST',$_ENV['DB_DATABASE']);
+}else{
+  define('DB_HOST','localhost');
+}
+if(isset($_ENV['DB_USERNAME'])){
+  define('DB_USERNAME',$_ENV['DB_USERNAME']);
+}else{
+  define('DB_USERNAME','root');
+}
+if(isset($_ENV['DB_PASSWORD'])){
+  define('DB_PASSWORD',$_ENV['DB_PASSWORD']);
+}else{
+  define('DB_PASSWORD','rootroot');
+}
+if(isset($_ENV['DB_DATABASE'])){
+  define('DB_DATABASE',$_ENV['DB_DATABASE']);
+}else{
+  define('DB_DATABASE','movilmad');
+}

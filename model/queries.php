@@ -1,6 +1,6 @@
 <?php
-// require_once './sql/connect.php';
 function getEmail($name){
+// require_once './sql/connect.php';
   $conn = connect();
     $query = "SELECT email FROM rclientes WHERE nombre='".$name."';";
     $stmt = $conn->prepare($query);

@@ -1,6 +1,6 @@
 <?php
-// require './movconfig.php';
 function connect(){
+// require './movconfig.php';
     $servername = DB_SERVER;
     $username = DB_USERNAME;
     $password = DB_PASSWORD;

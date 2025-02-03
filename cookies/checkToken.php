@@ -1,7 +1,7 @@
 <?php
- // require './model/verifyLogin.php'i;
-// require './model/queries.php';
 function checkToken(){
+// require './model/verifyLogin.php'i;
+// require './model/queries.php';
     $tokenok = false;
   if(isset($_COOKIE['acctk']) && isset($_COOKIE['name'])){
     $name = $_COOKIE['name'];
@@ -14,6 +14,5 @@ function checkToken(){
       $tokenok = true;
     }
   }
-
   return $tokenok;
 }

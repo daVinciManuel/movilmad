@@ -1,6 +1,6 @@
-<?php 
- // require_once('../sql/connect.php');
+<?php
 function verify($email,$pass){
+ // require_once('../sql/connect.php');
   $conn = connect();
   $ok = false;
     $query = "SELECT count(idcliente) FROM rclientes WHERE email='".$email."' AND idcliente='".$pass."';";

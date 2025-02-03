@@ -56,3 +56,13 @@ function getFullName($name){
   $fullname = $name . ' '. $apellido;
   return $fullname;
 }
+function getAllVehiculos(){
+  $conn = connect();
+    $stmt = $conn->prepare("SELECT matricula, marca, modelo FROM rvehiculos WHERE disponible='S';");
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $rawResult = $stmt->fetchAll();
+
+  return $rawResult;
+    $conn = null;
+}

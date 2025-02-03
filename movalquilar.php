@@ -30,7 +30,7 @@ require './control/calquilar.php';
             <B>Vehiculos disponibles en este momento:</B> <?php echo $fechayhora; ?> <BR><BR>
 		
 			<B>Matricula/Marca/Modelo: </B><select name="vehiculos" class="form-control">
-				
+              <?php echo $optionsList; ?>
 			</select>
 			
 		

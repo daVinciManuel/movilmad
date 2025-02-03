@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS movilmad;
-CREATE DATABASE movilmad;
+DROP DATABASE IF EXISTS railway;
+CREATE DATABASE railway;
 
-USE movilmad;
+USE railway;
 
 DROP TABLE IF EXISTS rclientes;
 

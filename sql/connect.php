@@ -1,7 +1,7 @@
 <?php
 function connect(){
 // require './movconfig.php';
-    $servername = DB_SERVER;
+    $servername = MYSQL_PRODUCTION;
     $username = DB_USERNAME;
     $password = DB_PASSWORD;
     $dbname = DB_DATABASE;

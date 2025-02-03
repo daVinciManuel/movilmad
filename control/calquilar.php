@@ -21,5 +21,4 @@ if (!checkToken()) {
   foreach($vehiculos as $v){
       $optionsList .= '<option value="' . $v['matricula'] .'">'.$v['matricula'] . ' - ' . $v['marca'] . ' ' . $v['modelo'] .'</option>';
   }
-  var_dump($vehiculos);
 }

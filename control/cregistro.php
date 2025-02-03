@@ -22,4 +22,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     savePassword($clave);
   }
 }
-
+var_dump($_ENV);

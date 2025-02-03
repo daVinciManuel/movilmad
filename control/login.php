@@ -1,6 +1,4 @@
 <?php
-echo "<h2>Hello</h2>";
-echo "<h2>This is the login </h2>";
 require_once '../movconfig.php';
 require_once '../sql/connect.php';
 require '../model/verifyLogin.php';
@@ -8,7 +6,6 @@ require '../cookies/makeToken.php';
 require '../cookies/saveUsername.php';
 if(isset($_POST['email']) && isset($_POST['password'])){
 
-  echo "<h2>POST recibido</h2>";
   $email = $_POST['email'];
   $pass = $_POST['password'];
   // verifica que usuario + contrasenna sean correctos

@@ -18,10 +18,10 @@ if (!checkToken()) {
     $fechayhora = date('Y-m-d H:i');
   $optionsList = '';
   $vehiculos = getAllVehiculos();
-  // foreach($vehiculos as $v){
-    // foreach($v as $r){
-      // $optionsList .= '<option value="' . $r['matricula'] .'">'.$r['matricula'] . ' - ' . $r['marca'] . ' ' . $r['modelo'] .'</option>';
-    // }
-  // }
+  foreach($vehiculos as $v){
+    foreach($v as $r){
+      $optionsList .= '<option value="' . $r['matricula'] .'">'.$r['matricula'] . ' - ' . $r['marca'] . ' ' . $r['modelo'] .'</option>';
+    }
+  }
   var_dump($vehiculos);
 }

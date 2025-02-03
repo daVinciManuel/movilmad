@@ -4,6 +4,7 @@ require './sql/connect.php';
 require './model/queries.php';
 require './model/verifyLogin.php';
 require './cookies/checkToken.php';
+ob_start();
 if(!checkToken()){
   header('Location: ./movlogin.php');
 }else{
@@ -19,3 +20,4 @@ if(!checkToken()){
 if(isset($_POST['volver'])){
   header('Location: ./movwelcome.php');
 }
+ob_end_flush();

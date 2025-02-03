@@ -22,7 +22,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     savePassword($clave);
   }
 }
-var_dump($_ENV['DB_HOST']);
-var_dump($_ENV['DB_DATABASE']);
-var_dump($_ENV['DB_USERNAME']);
-var_dump($_ENV['DB_PASSWORD']);

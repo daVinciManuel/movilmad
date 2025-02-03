@@ -9,10 +9,11 @@ function saveUser($idcliente,$nombre,$apellido,$email){
         $stmt = $conn->prepare($query);
 
         $fecha_alta = date('Y-m-d H:i');
-
+        $nombre = strtoupper($nombre);
+        $apellido = strtoupper($apellido);
         $stmt->bindParam(':idcliente', $idcliente);
-        $stmt->bindParam(':nombre', strtoupper($nombre));
-        $stmt->bindParam(':apellido', strtoupper($apellido));
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':apellido', $apellido);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':fecha_alta', $fecha_alta);
         // $stmt->bindParam(':fecha_baja', null);

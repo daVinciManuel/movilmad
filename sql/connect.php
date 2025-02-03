@@ -1,10 +1,10 @@
 <?php
 function connect(){
 // require './movconfig.php';
-    $dbhost = $_ENV['DB_HOST'];
-    $username = $_ENV['DB_USERNAME'];
-    $password = $_ENV['DB_PASSWORD'];
-    $dbname = $_ENV['DB_DATABASE'];
+    $dbhost = DB_HOST;
+    $username = DB_USERNAME;
+    $password = DB_PASSWORD;
+    $dbname = DB_DATABASE;
 
     try{
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$username,$password);

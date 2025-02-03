@@ -34,7 +34,7 @@ require './control/cdevolver.php';
 		<BR><BR>
 		<div>
 			<input type="submit" value="Devolver Vehiculo" name="devolver" class="btn btn-warning disabled">
-			<input type="submit" value="Volver" name="volver" class="btn btn-warning disabled">
+			<input type="submit" value="Volver" name="volver" onclick="window.location.href='<?php echo $welcomeURL; ?>'" class="btn btn-warning disabled">
 		</div>		
 	</form>
 	<!-- FIN DEL FORMULARIO -->

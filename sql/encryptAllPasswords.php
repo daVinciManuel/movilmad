@@ -48,7 +48,6 @@ for($i = 0; $i<sizeof($passList); $i++){
         die($e->getMessage());
     }
     $conn = null;
-  return $insertDone;
 }
 storePasswords(getIdList(),encryptAllId(getIdList()));
 echo '<b>OK hashed passwords stored succesfully<b>';

@@ -18,15 +18,15 @@ if (!checkToken()) {
 
 // ----------------- vaciar carrito ----------------------
 if(isset($_POST['vaciar'])){
-  if($_POST['vaciar']){
+  if(isset($_COOKIE['vehiculosList'])){
     foreach(explode(':',$_COOKIE['vehiculosList']) as $matricula){
-
       setVehiculoDisponible($matricula);
     }
     vaciar_carrito();
+      if(isset)
     $_POST['vehiculos'] = NULL;
     $agregarCarritoBTNstate = '';
-  $msgLimitReached = '';
+    $msgLimitReached = '';
   }
 }
 // ----------------- agregar a carrito ----------------------

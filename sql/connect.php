@@ -5,6 +5,11 @@ function connect(){
     $password = $_ENV['DB_PASSWORD'];
     $dbname = $_ENV['DB_DATABASE'];
 
+    // $dbhost = 'localhost';
+    // $username = 'root';
+    // $password = 'rootroot';
+    // $dbname = 'movilmad';
+
     try{
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$username,$password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

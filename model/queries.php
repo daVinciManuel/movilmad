@@ -66,3 +66,25 @@ function getAllVehiculos(){
   return $rawResult;
     $conn = null;
 }
+
+function getModel($matricula){
+  $conn = connect();
+    $query = "SELECT marca, modelo FROM rvehiculos WHERE matricula='".$matricula."';";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $rawResult = $stmt->fetchAll();
+    $marca = $rawResult[0]['marca'];
+    $modelo = $rawResult[0]['modelo'];
+  $fullname = $matricula . ' - ' . $marca . ' '. $modelo;
+  return $fullname;
+}
+
+function getPrecioBase($matricula){
+  $conn = connect();
+    $query = "SELECT preciobase FROM rvehiculos WHERE matricula='".$matricula."';";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $preciobase = $stmt->fetchColumn();
+  return $preciobase;
+}

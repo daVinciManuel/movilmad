@@ -27,20 +27,26 @@ require './control/calquilar.php';
     <B>Bienvenido/a: </B><?php echo $fullname; ?><BR><BR>
 		<B>Identificador Cliente:</B> <?php echo $id; ?> <BR><BR>
 		
-            <B>Vehiculos disponibles en este momento:</B> <?php echo $fechayhora; ?> <BR><BR>
-		
-			<B>Matricula/Marca/Modelo: </B><select name="vehiculos" class="form-control">
-              <?php echo $optionsList; ?>
-			</select>
+    <B>Vehiculos disponibles en este momento:</B> <?php echo $fechayhora; ?> <BR><BR>
+
+    <B>Matricula/Marca/Modelo: </B>
+    <select name="vehiculos" class="form-control">
+      <option disabled selected></option>
+      <?php echo $optionsList; ?>
+    </select>
 			
 		
 		<BR> <BR><BR><BR><BR><BR>
 		<div>
-			<input type="submit" value="Agregar a Cesta" name="agregar" class="btn btn-warning disabled">
+
+
+
+      <input type="submit" value="Agregar a Cesta" name="agregar" class="btn btn-warning disabled" <?php echo $msgLimitReached;echo $agregarCarritoBTNstate;?>>
 			<input type="submit" value="Realizar Alquiler" name="alquilar" class="btn btn-warning disabled">
 			<input type="submit" value="Vaciar Cesta" name="vaciar" class="btn btn-warning disabled">
 		</div>		
 	</form>
+  <?php if(isset($_POST['vehiculos'])){ include './view/carritoTable.php';} ?>
 	<!-- FIN DEL FORMULARIO -->
 <BR><a href="<?php echo $logoutURL;?>">Cerrar Sesión</a>
   </body>

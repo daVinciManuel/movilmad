@@ -9,7 +9,7 @@ x update links in login, welcome
 x copy php code from ./mov* to control/mov*
 x registro.php
 x save encrypted passwords in db
-- show available cars in movalquilar.php
-- make carrito cookie like pedidos app LIMIT 3 ITEMS
-- show carrito 
+x show available cars in movalquilar.php
+x make carrito cookie like pedidos app LIMIT 3 ITEMS
+x show carrito 
 - vaciar carrito button

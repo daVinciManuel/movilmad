@@ -17,15 +17,17 @@ if (!checkToken()) {
     $fechayhora = date('Y-m-d H:i');
 
 // ----------------- vaciar carrito ----------------------
-if($_POST['vaciar']){
-  foreach(explode(':',$_COOKIE['vehiculosList']) as $matricula){
+if(isset($_POST['vaciar'])){
+  if($_POST['vaciar']){
+    foreach(explode(':',$_COOKIE['vehiculosList']) as $matricula){
 
-    setVehiculoDisponible($matricula);
+      setVehiculoDisponible($matricula);
+    }
+    vaciar_carrito();
+    $_POST['vehiculos'] = NULL;
+    $agregarCarritoBTNstate = '';
+  $msgLimitReached = '';
   }
-  vaciar_carrito();
-  $_POST['vehiculos'] = NULL;
-  $agregarCarritoBTNstate = '';
-$msgLimitReached = '';
 }
 // ----------------- agregar a carrito ----------------------
 if(isset($_POST['agregar'])){

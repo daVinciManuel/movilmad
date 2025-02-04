@@ -5,7 +5,17 @@
   </thead>
   <tbody>
     <?php
-    if(!str_contains($_COOKIE['vehiculosList'],$_POST['vehiculos'])){
+    if(isset($_COOKIE['vehiculosList'])){
+    if(strpos($_COOKIE['vehiculosList'],$_POST['vehiculos']) != false){
+        ?>
+    <tr>
+      <td><?php echo getModel($_POST['vehiculos']); ?></td>
+      <td><?php echo getPrecioBase($_POST['vehiculos']); ?></td>
+    </tr>
+
+    <?php
+    }
+    }else {
         ?>
     <tr>
       <td><?php echo getModel($_POST['vehiculos']); ?></td>

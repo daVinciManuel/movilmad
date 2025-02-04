@@ -6,35 +6,33 @@
   <tbody>
     <?php
     if(isset($_COOKIE['vehiculosList'])){
-    if(strpos($_COOKIE['vehiculosList'],$_POST['vehiculos']) != false){
+      if(strpos($_COOKIE['vehiculosList'],$_POST['vehiculos']) == false){
+          ?>
+      <tr>
+        <td><?php echo getModel($_POST['vehiculos']); ?></td>
+        <td><?php echo getPrecioBase($_POST['vehiculos']); ?></td>
+      </tr>
+
+        <?php
+        $vehiculos = explode(":", $_COOKIE['vehiculosList']);
+        foreach ($vehiculos as $v) {
         ?>
-    <tr>
+
+          <tr>
+            <td><?php echo getModel($v); ?></td>
+            <td><?php echo getPrecioBase($v); ?></td>
+          </tr>
+
+<?php
+        }
+      }
+    }else{
+?>
+      <tr>
       <td><?php echo getModel($_POST['vehiculos']); ?></td>
-      <td><?php echo getPrecioBase($_POST['vehiculos']); ?></td>
-    </tr>
-
+        <td><?php echo getPrecioBase($_POST['vehiculos']); ?></td>
+      </tr>
     <?php
-    }
-    }else {
-        ?>
-    <tr>
-      <td><?php echo getModel($_POST['vehiculos']); ?></td>
-      <td><?php echo getPrecioBase($_POST['vehiculos']); ?></td>
-    </tr>
-
-    <?php
-    }
-    if(isset($_COOKIE['vehiculosList'])){
-
-      $vehiculos = explode(":", $_COOKIE['vehiculosList']);
-    foreach ($vehiculos as $v) {
-    ?>
-    <tr>
-      <td><?php echo getModel($v); ?></td>
-      <td><?php echo getPrecioBase($v); ?></td>
-    </tr>
-    <?php
-    }
     }
     ?>
   </tbody>

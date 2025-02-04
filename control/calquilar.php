@@ -43,6 +43,7 @@ if(isset($_POST['agregar'])){
       $optionsList .= '<option value="' . $v['matricula'] .'">'.$v['matricula'] . ' - ' . $v['marca'] . ' ' . $v['modelo'] .'</option>';
   }
 }
+// ----------------- LIMITE DE VEHICULOS ALCANZADO --------------------------
 $msgLimitReached = '';
 if(isset($_COOKIE['vehiculosList'])){
   $limitVehiculos = 3;

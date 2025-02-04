@@ -23,8 +23,9 @@ if(isset($_POST['vaciar'])){
       setVehiculoDisponible($matricula);
     }
     vaciar_carrito();
-      if(isset)
-    $_POST['vehiculos'] = NULL;
+      if(isset($_POST['vehiculos'])){
+        $_POST['vehiculos'] = NULL;
+      }
     $agregarCarritoBTNstate = '';
     $msgLimitReached = '';
   }
